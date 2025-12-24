@@ -19,9 +19,12 @@ function App() {
     resetGame,
   } = useGameState();
 
-  const [selectedQuestionId, setSelectedQuestionId] = useState<number | null>(null);
+  const [selectedQuestionId, setSelectedQuestionId] = useState<number | null>(
+    null
+  );
 
-  const selectedQuestion = questions.find((q) => q.id === selectedQuestionId) || null;
+  const selectedQuestion =
+    questions.find((q) => q.id === selectedQuestionId) || null;
 
   const handleQuestionClick = (questionId: number) => {
     setSelectedQuestionId(questionId);
@@ -46,20 +49,22 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-green-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-black via-blue-900 to-black relative overflow-hidden">
       <div className="snowflakes" aria-hidden="true">
         {[...Array(20)].map((_, i) => (
-          <div key={i} className="snowflake">❄</div>
+          <div key={i} className="snowflake">
+            ❄
+          </div>
         ))}
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-8">
         <header className="text-center mb-8">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-2 drop-shadow-lg animate-glow">
-            🎄 New Year Jeopardy 🎄
+          <h1 className="text-5xl md:text-6xl flex items-center justify-center gap-2 font-bold text-white mb-2">
+            Jany JYL  <img className='w-20' src="/logo.png" alt="" />
           </h1>
-          <p className="text-2xl text-yellow-300 font-semibold drop-shadow">
-            Comtehno University Edition
+          <p className="text-2xl text-white font-semibold drop-shadow">
+            Создано командой COMTEHNO для новогоднего настроения!
           </p>
         </header>
 
@@ -71,7 +76,10 @@ function App() {
             />
           </div>
           <div className="space-y-6">
-            <ScoreBoard teams={gameState.teams} currentTeamIndex={gameState.currentTeamIndex} />
+            <ScoreBoard
+              teams={gameState.teams}
+              currentTeamIndex={gameState.currentTeamIndex}
+            />
             <HostPanel
               teams={gameState.teams}
               currentTeamIndex={gameState.currentTeamIndex}

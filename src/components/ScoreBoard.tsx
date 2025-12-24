@@ -11,7 +11,7 @@ export const ScoreBoard = ({ teams, currentTeamIndex }: ScoreBoardProps) => {
 
   return (
     <div className="bg-white rounded-xl shadow-xl p-6 border-4 border-green-600">
-      <h2 className="text-2xl font-bold text-center mb-4 text-red-700 flex items-center justify-center gap-2">
+      <h2 className="text-2xl font-bold text-center mb-4 text-black flex items-center justify-center gap-2">
         <Trophy className="text-yellow-500" />
         Таблица результатов
       </h2>
@@ -31,10 +31,10 @@ export const ScoreBoard = ({ teams, currentTeamIndex }: ScoreBoardProps) => {
                 <div className="text-2xl font-bold text-gray-600">
                   {index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : `${index + 1}.`}
                 </div>
-                <div
+                {/* <div
                   className="w-4 h-4 rounded-full"
                   style={{ backgroundColor: team.color }}
-                />
+                /> */}
                 <div className="font-bold text-lg">{team.name}</div>
                 {isCurrent && (
                   <span className="bg-green-600 text-white text-xs px-2 py-1 rounded-full animate-pulse">

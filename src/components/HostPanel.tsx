@@ -72,10 +72,6 @@ export const HostPanel = ({
 
   return (
     <div className="bg-gradient-to-br from-red-700 to-red-800 rounded-xl shadow-2xl p-6 border-4 border-yellow-400">
-      <h2 className="text-2xl font-bold text-white mb-6 text-center">
-        Панель Ведущего
-      </h2>
-
       <div className="bg-white rounded-lg p-4 mb-6">
         <h3 className="font-bold text-lg mb-3 text-gray-800">Добавить команду</h3>
         <div className="space-y-3">
@@ -88,7 +84,7 @@ export const HostPanel = ({
             onKeyPress={(e) => e.key === 'Enter' && handleAddTeam()}
           />
           <div className="flex gap-2 flex-wrap">
-            {teamColors.map((color) => (
+            {/* {teamColors.map((color) => (
               <button
                 key={color}
                 onClick={() => setSelectedColor(color)}
@@ -97,7 +93,7 @@ export const HostPanel = ({
                 }`}
                 style={{ backgroundColor: color }}
               />
-            ))}
+            ))} */}
           </div>
           <button
             onClick={handleAddTeam}
@@ -119,10 +115,10 @@ export const HostPanel = ({
                 currentTeamIndex === index ? 'bg-yellow-100 border-2 border-yellow-400' : 'bg-gray-50'
               }`}
             >
-              <div
+              {/* <div
                 className="w-4 h-4 rounded-full flex-shrink-0"
                 style={{ backgroundColor: team.color }}
-              />
+              /> */}
               <div className="flex-1 font-semibold">{team.name}</div>
               {editingTeamId === team.id ? (
                 <input
@@ -164,7 +160,7 @@ export const HostPanel = ({
         </div>
       </div>
 
-      <div className="bg-white rounded-lg p-4 mb-6">
+      {/* <div className="bg-white rounded-lg p-4 mb-6">
         <h3 className="font-bold text-lg mb-3 text-gray-800">Управление ходом</h3>
         <button
           onClick={onNextTeam}
@@ -174,7 +170,7 @@ export const HostPanel = ({
           <ChevronRight size={20} />
           Следующая команда
         </button>
-      </div>
+      </div> */}
 
       <button
         onClick={handleResetGame}

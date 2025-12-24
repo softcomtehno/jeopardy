@@ -16,7 +16,7 @@ export const GameBoard = ({ answeredQuestions, onQuestionClick }: GameBoardProps
         {categories.map((category) => (
           <div
             key={category}
-            className="bg-gradient-to-br from-red-600 to-red-700 text-white p-4 rounded-lg shadow-lg text-center font-bold text-sm md:text-base border-2 border-yellow-400"
+            className="bg-blue-500 text-white p-4 rounded-lg shadow-lg text-center font-bold text-sm md:text-base border-2 border-green-900"
           >
             {category}
           </div>
@@ -33,11 +33,11 @@ export const GameBoard = ({ answeredQuestions, onQuestionClick }: GameBoardProps
                 onClick={() => question && !isAnswered && onQuestionClick(question.id)}
                 disabled={isAnswered}
                 className={`
-                  p-6 rounded-lg shadow-lg font-bold text-2xl transition-all duration-300
+                  p-6 rounded-lg shadow-lg  font-bold text-2xl transition-all duration-300
                   ${
                     isAnswered
                       ? 'bg-gray-400 text-gray-600 cursor-not-allowed opacity-50'
-                      : 'bg-gradient-to-br from-blue-600 to-blue-700 text-yellow-300 hover:from-blue-500 hover:to-blue-600 hover:scale-105 hover:shadow-xl cursor-pointer border-2 border-yellow-400'
+                      : 'bg-green-500 text-white hover:from-blue-500 hover:to-blue-600 hover:scale-105 hover:shadow-xl cursor-pointer border-2 border-green-900'
                   }
                 `}
               >
