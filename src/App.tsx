@@ -61,7 +61,7 @@ function App() {
       <div className="relative z-10 container mx-auto px-4 py-8">
         <header className="text-center mb-8">
           <h1 className="text-5xl md:text-6xl flex items-center justify-center gap-2 font-bold text-white mb-2">
-            Jany JYL <img className="w-20" src="/logo.png" alt="" />
+            Жаны Жыл 2026 <img className="w-20" src="/logo.png" alt="" />
           </h1>
           <p className="text-2xl text-white font-semibold drop-shadow">
             Создано командой COMTEHNO для новогоднего настроения!
